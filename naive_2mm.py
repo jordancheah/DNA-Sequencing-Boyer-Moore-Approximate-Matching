@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 '''
 Generic Naive Approximate Matching which allows n mismatches
-Jordan Cheah, Oct 2015
+
+Adapted and Enhanced by Jordan Cheah, Oct 2015
+Acknowledgement - Original Author: Ben Langmead
 '''
 
 import string
-
   
 def naive(p, t):
     occurrences = []

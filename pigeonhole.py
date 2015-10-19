@@ -1,7 +1,13 @@
 #!/usr/bin/env python
 
-"""Index-assisted approximate matching.
-Tested on a k-mer index for indexing a text."""
+"""
+Two algorithms are presented here:
+a) Boyer-Moore approximate matching with Pigeon Hole.
+b) Index-assisted approximate matching with k-mer index, Pigeon Hole
+
+Adapted and Enhanced by Jordan Cheah, Oct 2015
+Acknowledgement - Original Author: Ben Langmead
+"""
 
 import string
 import boyermoore
@@ -59,6 +65,7 @@ here.)
 
 '''
 
+# Pigeon Hole / Boyer-Moore Approximate Matching
 def approximate_match(p, t, n):
     segment_length = int(round(len(p) / (n+1)))
     all_matches = set()
@@ -86,6 +93,7 @@ def approximate_match(p, t, n):
                 all_matches.add(m - start)
     return list(all_matches)
 
+# Pigeon Hole / K-Mer index Approximate Matching
 def queryIndex_approximate_match(p, t, n, index):
     # 8-mer index, p is 24, and we allow up to two mismatches
     # Divide p into 3 segments, so at least one of the segment will be an exact match

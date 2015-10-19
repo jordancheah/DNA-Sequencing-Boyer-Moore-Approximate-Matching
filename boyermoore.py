@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 
-"""Boyer-Moore preprocessing.
-Original Author: Ben Langmead
-Adapted and enhanced by Jordan Cheah, Oct 2015
+"""Boyer-Moore preprocessing with unittest
+
+Adapted and Enhanced by Jordan Cheah, Oct 2015
+Acknowledgement - Original Author: Ben Langmead
+
 """
 
 import unittest
